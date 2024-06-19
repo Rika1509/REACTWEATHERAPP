@@ -1,11 +1,11 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 
-import App from "./App";
-import Searchbar from "./Searchbar";
-import Lastupdated from "./Lastupdate";
-import WeatherDescription from "./Weatherdescription";
-import WeatherInfo from "./WeatherInfo";
+import App from "./AtomicDesign/Atom/Index/index";
+import Searchbar from "./AtomicDesign/Atom/Searchbar/Searchbar";
+import Lastupdated from "./AtomicDesign/Atom/Lastupdate/Lastupdate";
+import WeatherDescription from "./AtomicDesign/Atom/Weatherdescription/Weatherdescription";
+import WeatherInfo from "./AtomicDesign/Atom/WeatherInfo/WeatherInfo";
 import "./style.css";
 
 const rootElement = document.getElementById("root");
