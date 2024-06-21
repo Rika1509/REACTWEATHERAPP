@@ -1,11 +1,12 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 
-import App from "./AtomicDesign/Atom/Index/index";
-import Searchbar from "./AtomicDesign/Atom/Searchbar/Searchbar";
-import Lastupdated from "./AtomicDesign/Atom/Lastupdate/Lastupdate";
-import WeatherDescription from "./AtomicDesign/Atom/Weatherdescription/Weatherdescription";
-import WeatherInfo from "./AtomicDesign/Atom/WeatherInfo/WeatherInfo";
+import App from "./components/molecule/Index/index";
+import Searchbar from "./components/molecule/Searchbar/Searchbar";
+import Lastupdated from "./components/molecule/Lastupdate/Lastupdate";
+import WeatherDescription from "./components/molecule/Weatherdescription/Weatherdescription";
+import WeatherInfo from "./components/molecule/WeatherInfo/WeatherInfo";
+import Footer from "./components/molecule/Footer/Footer";
 import "./style.css";
 
 const rootElement = document.getElementById("root");
@@ -21,6 +22,7 @@ root.render(
           <Lastupdated />
           <WeatherInfo />
           <WeatherDescription />
+          <Footer />
         </div>
       </div>
     </div>
