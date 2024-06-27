@@ -1,7 +1,8 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 
-import App from "./components/molecule/Index/index";
+import App from "./App";
+import Header from "./components/molecule/Header/Header";
 import Searchbar from "./components/molecule/Searchbar/Searchbar";
 import Lastupdated from "./components/molecule/Lastupdate/Lastupdate";
 import WeatherDescription from "./components/molecule/Weatherdescription/Weatherdescription";
@@ -14,7 +15,8 @@ const root = createRoot(rootElement);
 
 root.render(
   <StrictMode>
-    <App />
+    <Header />
+    <App>
     <div className="container">
       <div className="card mb-3">
         <Searchbar />
@@ -26,6 +28,7 @@ root.render(
         </div>
       </div>
     </div>
+    </App>
   </StrictMode>
 );
 

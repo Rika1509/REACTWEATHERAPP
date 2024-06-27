@@ -1,6 +1,4 @@
-import "../../../style.css"
-
-export default function App() {
+export default function Header() {
   return (
     <div className="App">
       <h1>React Weather App</h1>
