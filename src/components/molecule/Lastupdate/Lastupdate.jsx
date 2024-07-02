@@ -1,4 +1,7 @@
-export default function Lastupdated() {
+export default function Lastupdated(props) {
+
+  const { temperature, IconUrl } = props.data;
+
   let weatherData = {
     city: "Rome",
     date: "Tuesday, 12:00",
@@ -11,8 +14,8 @@ export default function Lastupdated() {
       <small>Last updated:</small>
       <h4 id="date">{weatherData.date}</h4>
       <div className="main">
-        <img src={weatherData.imgUrl} id="icon" />
-        <span className="temperature">14</span>
+        <img src={IconUrl} id="icon" />
+        <span className="temperature">{Math.round(temperature)}</span>
         <span className="units">
           <a href="#" id="celsius-link" className="active">
             °C

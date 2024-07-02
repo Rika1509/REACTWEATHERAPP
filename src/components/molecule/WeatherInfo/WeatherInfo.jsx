@@ -1,12 +1,12 @@
-export default function weatherInfo() {
-  let weatherData = {
-    description: "Cloudy",
-  };
+export default function weatherInfo(props) {
+
+  const { description } = props.data;
+
   return (
     <div className="col-md-3" id="current-weather-info">
       <div className="card-body">
         <h5 className="card-title" id="weather-description">
-          {weatherData.description}
+          {(description)}
         </h5>
       </div>
     </div>
