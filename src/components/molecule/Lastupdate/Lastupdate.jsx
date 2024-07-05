@@ -1,18 +1,14 @@
+import FormattedDate from "../../../Utils/FormattedDate";
+
 export default function Lastupdated(props) {
 
-  const { temperature, IconUrl } = props.data;
+  const { temperature, IconUrl, city, date } = props.data;
 
-  let weatherData = {
-    city: "Rome",
-    date: "Tuesday, 12:00",
-    imgUrl:
-      "http://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-day.png",
-  };
   return (
     <div className="col-md-5" id="current-weather">
-      <h1>{weatherData.city}</h1>
+      <h1>{city}</h1>
       <small>Last updated:</small>
-      <h4 id="date">{weatherData.date}</h4>
+      <h4 id="date"><FormattedDate data={date}/></h4>
       <div className="main">
         <img src={IconUrl} id="icon" />
         <span className="temperature">{Math.round(temperature)}</span>
