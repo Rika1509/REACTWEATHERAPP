@@ -1,10 +1,4 @@
 export default function FormattedDate(props) {
-
-    if (!props.date) {
-        return <div>No date provided</div>;
-    }
-
-    const { date } = props.data;
     
     let days = [    
         "Sunday",
@@ -29,7 +23,6 @@ export default function FormattedDate(props) {
     return (
         <div>
             {currentDate}
-            Thursday 11.00
         </div>
     );
 }

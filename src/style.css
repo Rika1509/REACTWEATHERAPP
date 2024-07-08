@@ -65,6 +65,13 @@ li {
   left: 10px;
 }
 
+.feels-like {
+  position: relative;
+  left: 110px;
+  bottom: 25px;
+  color: #9aa0a6;
+}
+
 a {
   text-decoration: none;
 }

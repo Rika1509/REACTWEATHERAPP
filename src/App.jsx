@@ -14,6 +14,7 @@ export default function App() {
         setWeatherData({
             ready: true,
             temperature: response.data.temperature.current,
+            FeelsLike: response.data.temperature.feels_like,
             humidity: response.data.temperature.humidity,
             pressure: response.data.temperature.pressure,
             date: new Date(response.data.time * 1000),
@@ -27,7 +28,7 @@ export default function App() {
     useEffect(() => {
       if (!weatherData.ready) {
         const apiKey = "a606oe7b016d122f0t18d2431534646a";
-        let defaultCity = "London"
+        let defaultCity = "Rome"
         let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${defaultCity}&key=${apiKey}&units=metric`
         axios.get(apiUrl).then(handleResponse);
       }

@@ -2,13 +2,13 @@ import FormattedDate from "../../../Utils/FormattedDate";
 
 export default function Lastupdated(props) {
 
-  const { temperature, IconUrl, city, date } = props.data;
+  const { temperature, IconUrl, city, date, FeelsLike } = props.data;
 
   return (
     <div className="col-md-5" id="current-weather">
       <h1>{city}</h1>
       <small>Last updated:</small>
-      <h4 id="date"><FormattedDate data={date}/></h4>
+      <h4 id="date"><FormattedDate date={date}/></h4>
       <div className="main">
         <img src={IconUrl} id="icon" />
         <span className="temperature">{Math.round(temperature)}</span>
@@ -22,6 +22,7 @@ export default function Lastupdated(props) {
           </a>
         </span>
       </div>
+      <span className="feels-like">Feels like: {Math.round(FeelsLike)} </span>
     </div>
   );
 }
