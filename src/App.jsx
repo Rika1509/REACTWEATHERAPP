@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import axios from "axios";
 import Searchbar from "./components/molecule/Searchbar/Searchbar";
 import Lastupdated from "./components/molecule/Lastupdate/Lastupdate";
@@ -8,6 +8,7 @@ import Footer from "./components/molecule/Footer/Footer";
 
 export default function App() {
     const [weatherData, setWeatherData] = useState({ ready : false});
+    const [city, setCity] = useState("")
 
     function handleResponse(response) {
         console.log(response.data);
@@ -25,20 +26,33 @@ export default function App() {
         });
     }
 
+      const searchCity = useCallback((city) => {
+        const apiKey = "a606oe7b016d122f0t18d2431534646a";
+        let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`
+        axios.get(apiUrl).then(handleResponse);
+      }, []);
+   
+      function handleSubmit(event) {
+        event.preventDefault();
+        console.log(city)
+        searchCity(city);
+      }
+  
+      function handleCityChange(event) {
+        setCity(event.target.value)
+      }
+
     useEffect(() => {
       if (!weatherData.ready) {
-        const apiKey = "a606oe7b016d122f0t18d2431534646a";
-        let defaultCity = "Rome"
-        let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${defaultCity}&key=${apiKey}&units=metric`
-        axios.get(apiUrl).then(handleResponse);
+        searchCity("Rome");
       }
-    }, [weatherData.ready]);
+    }, [weatherData.ready, searchCity]);
 
     if (weatherData.ready) {
         return (
             <div className="container">
             <div className="card mb-3">
-              <Searchbar />
+              <Searchbar handleCityChange={handleCityChange} handleSubmit={handleSubmit}/>
               <div className="row g-0">
                 <Lastupdated data={weatherData}/>
                 <WeatherInfo data={weatherData}/>
@@ -47,8 +61,9 @@ export default function App() {
               </div>
             </div>
           </div>
-        )
+        )     
      } else {
         return "Loading..."
     }
-}
+  }
+  

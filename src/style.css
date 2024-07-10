@@ -19,6 +19,7 @@ body {
 .card.mb-3 {
   box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
   background-color: #ffffff;
+  max-width: 700px;
 }
 
 h4,
@@ -33,6 +34,17 @@ h5 {
 
 .main {
   padding: 10px;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#current-location {
+  white-space: nowrap;
+
 }
 
 #current-weather-info {
