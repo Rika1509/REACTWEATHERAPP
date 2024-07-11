@@ -1,4 +1,5 @@
 import FormattedDate from "../../../Utils/FormattedDate";
+import WeatherIcon from "../../../Utils/WeatherIcon";
 
 export default function Lastupdated(props) {
 
@@ -10,7 +11,8 @@ export default function Lastupdated(props) {
       <small>Last updated:</small>
       <h4 id="date"><FormattedDate date={date}/></h4>
       <div className="main">
-        <img src={IconUrl} id="icon" />
+        {/* <img src={IconUrl} id="icon" /> */}
+        <WeatherIcon code={IconUrl} />
         <span className="temperature">{Math.round(temperature)}</span>
         <span className="units">
           <a href="#" id="celsius-link" className="active">

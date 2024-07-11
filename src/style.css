@@ -55,12 +55,14 @@ form {
   text-transform: capitalize;
 }
 
-.fa-cloud-moon {
-  font-size: 50px;
-  padding: 10px 5px;
+canvas {
+  padding: 10px;
+  margin-right: 10px;
 }
 
 .temperature {
+  position: relative;
+  bottom: 20px;
   font-size: 50px;
 }
 
@@ -73,7 +75,7 @@ li {
 
 .units {
   position: relative;
-  top: -24px;
+  bottom: 43px;
   left: 10px;
 }
 
