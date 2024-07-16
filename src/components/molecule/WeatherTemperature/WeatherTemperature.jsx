@@ -24,11 +24,11 @@ export default function WeatherTemperature (props) {
         <span className="units">
           {unit === "celsius" ? (
             <>
-              °C | <a href="#" id="celsius-link" className="active" onClick={showFahrenheit}>°F</a>
+              °C | <a href="#" id="celsius-link" onClick={showFahrenheit}>°F</a>
             </>
           ) : (
             <>
-              <a href="#" id="fahrenheit-link" onClick={showCelsius}>°C</a> | °F
+              <a href="#" id="fahrenheit-link" className="active" onClick={showCelsius}>°C</a> | °F
             </>
           )}
         </span>

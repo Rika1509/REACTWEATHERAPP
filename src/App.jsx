@@ -5,6 +5,7 @@ import Lastupdated from "./components/molecule/Lastupdate/Lastupdate";
 import WeatherInfo from "./components/molecule/WeatherInfo/WeatherInfo";
 import WeatherDescription from "./components/molecule/Weatherdescription/Weatherdescription";
 import Footer from "./components/molecule/Footer/Footer";
+import WeatherForecast from "./components/WeatherForecast/WeatherForecast";
 
 export default function App() {
     const [weatherData, setWeatherData] = useState({ ready : false});
@@ -57,6 +58,7 @@ export default function App() {
                 <Lastupdated data={weatherData}/>
                 <WeatherInfo data={weatherData}/>
                 <WeatherDescription data={weatherData}/>
+                <WeatherForecast data={weatherData}/>
                 <Footer />
               </div>
             </div>

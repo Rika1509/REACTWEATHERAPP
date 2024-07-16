@@ -8,6 +8,7 @@ import Lastupdated from "./components/molecule/Lastupdate/Lastupdate";
 import WeatherDescription from "./components/molecule/Weatherdescription/Weatherdescription";
 import WeatherInfo from "./components/molecule/WeatherInfo/WeatherInfo";
 import Footer from "./components/molecule/Footer/Footer";
+import WeatherForecast from "./components/WeatherForecast/WeatherForecast";
 import "./style.css";
 
 const rootElement = document.getElementById("root");
@@ -24,6 +25,7 @@ root.render(
           <Lastupdated />
           <WeatherInfo />
           <WeatherDescription />
+          <WeatherForecast />
           <Footer />
         </div>
       </div>
