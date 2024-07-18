@@ -24,6 +24,8 @@ export default function App() {
             IconUrl: response.data.condition.icon_url,
             wind: response.data.wind.speed,
             city: response.data.city,
+            lon: response.data.coordinates.longitude,
+            lat: response.data.coordinates.latitude
         });
     }
 
