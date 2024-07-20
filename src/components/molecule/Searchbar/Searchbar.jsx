@@ -1,4 +1,4 @@
-export default function Searchbar({ handleCityChange, handleSubmit }) {
+export default function Searchbar({ handleCityChange, handleSubmit, getCurrentLocation }) {
   return (
     <div className="Searchbar">
       <div className="input-group mb-5">
@@ -18,6 +18,7 @@ export default function Searchbar({ handleCityChange, handleSubmit }) {
             className="btn btn-outline-info"
             id="current-location"
             type="button"
+            onClick={getCurrentLocation}
           >
             Current Location
           </button>
