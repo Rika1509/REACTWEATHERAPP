@@ -65,7 +65,7 @@ export default function App() {
 
   if (weatherData.ready) {
     return (
-      <div className="container">
+      <div className="App container">
         <div className="card mb-3">
           <Searchbar
             handleCityChange={handleCityChange}
